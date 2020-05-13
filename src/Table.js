@@ -1,33 +1,13 @@
 import React, { Component } from 'react';
+import TableHeader from './TableHeader';
+import TableBody from './TableBody';
  
 class Table extends Component {
     render() { 
         return (
-            <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Job</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Naomi</td>
-                        <td>Doctor</td>
-                    </tr>
-                    <tr>
-                        <td>Erick</td>
-                        <td>Engineer</td>
-                    </tr>
-                    <tr>
-                        <td>Vera</td>
-                        <td>Teacher</td>
-                    </tr>
-                    <tr>
-                        <td>Steve</td>
-                        <td>Coder</td>
-                    </tr>
-                </tbody>
+            <table className="table">
+                <TableHeader />
+                <TableBody />
             </table>
         );
     }
