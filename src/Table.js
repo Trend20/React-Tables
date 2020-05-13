@@ -1,22 +1,15 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TableHeader from './TableHeader';
 import TableBody from './TableBody';
  
-class Table extends Component {
-    constructor(props){
-        super(props);
-        this.state={
-
-        }
-    }
-    render() { 
+const Table = (props) => {
+        const { characterData, removeCharacter } = this.props;
         return (
             <table className="table">
                 <TableHeader />
-                <TableBody />
+                <TableBody characterData={characterData} removeCharacter={removeCharacter} />
             </table>
         );
-    }
 }
  
 export default Table;
