@@ -13,6 +13,10 @@ class Form extends Component {
             [name]:value
         });
     }
+    submitForm = () =>{
+        this.props.handleSubmit(this.state);
+        this.setState(this.initialState)
+    }
     render() { 
         const { name, job} = this.state
         return (
@@ -20,19 +24,23 @@ class Form extends Component {
                 <label for="name">Name</label>
                 <input 
                 type="text"
+                className="form-control" 
                 placeholder="Enter Name"
                 value={name}
                 name="name"
                 id="name"
                 onChange={this.handleChange} />
                 <label for="job">Job</label>
-                <input 
+                <input
+                className="form-control" 
                 type="text"
                 placeholder="Enter Job"
                 value={job}
                 name="job"
-                id="lob"
+                id="job"
                 onChange={this.handleChange} />
+                <br />
+                <input type="button" className="btn btn-primary" value="Submit" onClick={this.submitForm} />
             </form>
         );
     }
