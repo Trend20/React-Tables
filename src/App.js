@@ -3,24 +3,7 @@ import Table from './components/Table';
  
 class App extends Component {
     state={
-        characters: [
-            {
-                name: 'Java',
-                job: 'Android',
-            },
-            {
-                name: 'Javascript',
-                job: 'Web Apps',
-            },
-            {
-                name: 'Python',
-                job: 'Machine Learning',
-            },
-            {
-                name: 'Swift',
-                job: 'Apple',
-            }
-        ]
+        characters: []
     }
 
     removeCharacter = (index) =>{

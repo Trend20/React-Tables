@@ -1,0 +1,25 @@
+import React, { Component } from 'react';
+ 
+class Form extends Component {
+    initialState={
+        name:'',
+        job:''
+    }
+    state=this.initialState;
+
+    handleChange = (event) =>{
+        const {name, value} = event.target;
+        this.setState({
+            [name]:value
+        });
+    }
+    render() { 
+        return (
+            <div>
+                Form
+            </div>
+        );
+    }
+}
+ 
+export default Form;
