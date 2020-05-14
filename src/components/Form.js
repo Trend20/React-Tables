@@ -14,10 +14,26 @@ class Form extends Component {
         });
     }
     render() { 
+        const { name, job} = this.state
         return (
-            <div>
-                Form
-            </div>
+            <form>
+                <label for="name">Name</label>
+                <input 
+                type="text"
+                placeholder="Enter Name"
+                value={name}
+                name="name"
+                id="name"
+                onChange={this.handleChange} />
+                <label for="job">Job</label>
+                <input 
+                type="text"
+                placeholder="Enter Job"
+                value={job}
+                name="job"
+                id="lob"
+                onChange={this.handleChange} />
+            </form>
         );
     }
 }
